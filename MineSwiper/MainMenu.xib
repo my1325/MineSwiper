@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="12120"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="NSApplication">
+            <connections>
+                <outlet property="delegate" destination="q7H-Ov-ujB" id="nf7-Ea-MCr"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
+        <menu title="Main Menu" systemMenu="main" id="AYu-sK-qS6">
+            <items>
+                <menuItem title="MineSwiper" id="XYu-v3-Xxf">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <menu key="submenu" title="MineSwiper" id="ql5-k6-W3Q">
+                        <items>
+                            <menuItem title="Game" id="t4C-zZ-04A">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <menu key="submenu" title="Game" id="sTm-yB-UbD">
+                                    <items>
+                                        <menuItem title="初级" state="on" keyEquivalent="1" id="GUL-ll-QFs">
+                                            <connections>
+                                                <action selector="touchPrimaryMenuItem:" target="q7H-Ov-ujB" id="zXd-cZ-z1F"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="中级" keyEquivalent="2" id="hJ8-Qg-rda">
+                                            <connections>
+                                                <action selector="touchIntermediateMenuItem:" target="q7H-Ov-ujB" id="uuP-xc-4LE"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="高级" keyEquivalent="3" id="DC5-Pk-eSI">
+                                            <connections>
+                                                <action selector="touchHighMenuItem:" target="q7H-Ov-ujB" id="Qss-3x-WC6"/>
+                                            </connections>
+                                        </menuItem>
+                                    </items>
+                                </menu>
+                            </menuItem>
+                            <menuItem isSeparatorItem="YES" id="fza-5z-7Sc"/>
+                            <menuItem title="Hide MineSwiper" keyEquivalent="h" id="85m-Wb-TAV">
+                                <connections>
+                                    <action selector="hide:" target="-1" id="5QC-P1-J0Z"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Hide Others" keyEquivalent="h" id="d03-cV-Hgn">
+                                <modifierMask key="keyEquivalentModifierMask" option="YES" command="YES"/>
+                                <connections>
+                                    <action selector="hideOtherApplications:" target="-1" id="qUv-Fd-Pyz"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Show All" id="1pD-Gi-gD3">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <connections>
+                                    <action selector="unhideAllApplications:" target="-1" id="JHV-Cb-pPB"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem isSeparatorItem="YES" id="l1q-on-eQG"/>
+                            <menuItem title="Quit MineSwiper" keyEquivalent="q" id="8tz-oc-U7h">
+                                <connections>
+                                    <action selector="terminate:" target="-1" id="J4x-2U-96X"/>
+                                </connections>
+                            </menuItem>
+                        </items>
+                    </menu>
+                </menuItem>
+            </items>
+            <connections>
+                <outlet property="delegate" destination="q7H-Ov-ujB" id="WSZ-oH-XVE"/>
+            </connections>
+        </menu>
+        <customObject id="q7H-Ov-ujB" customClass="AppDelegate" customModule="MineSwiper" customModuleProvider="target">
+            <connections>
+                <outlet property="highMenuItem" destination="DC5-Pk-eSI" id="amD-fn-gg0"/>
+                <outlet property="intermediateMenuItem" destination="hJ8-Qg-rda" id="5QC-DT-1iR"/>
+                <outlet property="primaryMenuItem" destination="GUL-ll-QFs" id="HVY-hV-r8l"/>
+            </connections>
+        </customObject>
+    </objects>
+</document>
