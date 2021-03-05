@@ -19,7 +19,7 @@ class MSMainWC: NSWindowController {
     @IBOutlet weak var magicViewHeight: NSLayoutConstraint?
     @IBOutlet weak var magicViewWidth: NSLayoutConstraint?
     
-    override var windowNibName: NSNib.Name? { return NSNib.Name(rawValue: "MSMainWC") }
+    override var windowNibName: NSNib.Name? { return NSNib.Name("MSMainWC") }
     override var owner: AnyObject? { return self }
     
     var type: MSMagicType = .small

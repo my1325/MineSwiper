@@ -20,23 +20,23 @@ class MSMagicMineFlagCountView: NSView {
         didSet {
             if flagCount >= 0 {
                 let baiBit: Int = flagCount / 100
-                imageView1.image = NSImage(named: NSImage.Name(rawValue: "gnumber_\(baiBit)"))
+                imageView1.image = NSImage(named: NSImage.Name("gnumber_\(baiBit)"))
                 
                 let tenBit: Int = (flagCount % 100) / 10
-                imageView2.image = NSImage(named: NSImage.Name(rawValue: "gnumber_\(tenBit)"))
+                imageView2.image = NSImage(named: NSImage.Name("gnumber_\(tenBit)"))
                 
                 let geBit: Int = (flagCount % 100) % 10
-                imageView3.image = NSImage(named: NSImage.Name(rawValue: "gnumber_\(geBit)"))
+                imageView3.image = NSImage(named: NSImage.Name("gnumber_\(geBit)"))
             }
             else if flagCount > -100 {
                 
-                imageView1.image = flagCount <= -10 ? NSImage(named: NSImage.Name(rawValue: "gnumber_dash")) : NSImage(named: NSImage.Name(rawValue: "gnumber_0"))
+                imageView1.image = flagCount <= -10 ? NSImage(named: NSImage.Name("gnumber_dash")) : NSImage(named: NSImage.Name("gnumber_0"))
                 
                 let tenBit: Int = (abs(flagCount) % 100) / 10
-                imageView2.image = tenBit == 0 ? NSImage(named: NSImage.Name(rawValue: "gnumber_dash")) : NSImage(named: NSImage.Name(rawValue: "gnumber_\(tenBit)"))
+                imageView2.image = tenBit == 0 ? NSImage(named: NSImage.Name("gnumber_dash")) : NSImage(named: NSImage.Name("gnumber_\(tenBit)"))
                 
                 let geBit: Int = (abs(flagCount) % 100) % 10
-                imageView3.image = NSImage(named: NSImage.Name(rawValue: "gnumber_\(geBit)"))
+                imageView3.image = NSImage(named: NSImage.Name("gnumber_\(geBit)"))
             }
         }
     }

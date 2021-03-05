@@ -22,13 +22,13 @@ class MSMagicTimeCountView: NSView {
         didSet {
             DispatchQueue.main.async {
                 let baiBit: Int = self.timeCount / 100
-                self.imageView1.image = NSImage(named: NSImage.Name(rawValue: "gnumber_\(baiBit)"))
+                self.imageView1.image = NSImage(named: NSImage.Name("gnumber_\(baiBit)"))
                 
                 let tenBit: Int = (self.timeCount % 100) / 10
-                self.imageView2.image = NSImage(named: NSImage.Name(rawValue: "gnumber_\(tenBit)"))
+                self.imageView2.image = NSImage(named: NSImage.Name("gnumber_\(tenBit)"))
                 
                 let geBit: Int = (self.timeCount % 100) % 10
-                self.imageView3.image = NSImage(named: NSImage.Name(rawValue: "gnumber_\(geBit)"))
+                self.imageView3.image = NSImage(named: NSImage.Name("gnumber_\(geBit)"))
             }
 
         }

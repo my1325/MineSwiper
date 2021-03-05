@@ -21,13 +21,13 @@ class MSMagicModel: NSObject {
         var magicItem: MSMagicMap.MSMagicMapItem = MSMagicMap.MSMagicMapItem() {
             didSet {
                 if magicItem.isMine {
-                    unCoverImage = NSImage(named: NSImage.Name(rawValue: "tile_b"))
+                    unCoverImage = NSImage(named: NSImage.Name("tile_b"))
                 }
                 else if magicItem.numOfArountMines == 0 {
-                    unCoverImage = NSImage(named: NSImage.Name(rawValue: "tile_base"))
+                    unCoverImage = NSImage(named: NSImage.Name("tile_base"))
                 }
                 else {
-                    unCoverImage = NSImage(named: NSImage.Name(rawValue: "tile_\(magicItem.numOfArountMines)"))
+                    unCoverImage = NSImage(named: NSImage.Name("tile_\(magicItem.numOfArountMines)"))
                 }
             }
         }
