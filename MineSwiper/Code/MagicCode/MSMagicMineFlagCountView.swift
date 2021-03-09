@@ -7,6 +7,8 @@
 //
 
 import Cocoa
+import RxCocoa
+import RxSwift
 
 class MSMagicMineFlagCountView: NSView {
     
@@ -16,37 +18,6 @@ class MSMagicMineFlagCountView: NSView {
 
     var bkImageView: NSImageView = NSImageView()
 
-    var flagCount: Int = 0 {
-        didSet {
-            if flagCount >= 0 {
-                let baiBit: Int = flagCount / 100
-                imageView1.image = NSImage(named: NSImage.Name("gnumber_\(baiBit)"))
-                
-                let tenBit: Int = (flagCount % 100) / 10
-                imageView2.image = NSImage(named: NSImage.Name("gnumber_\(tenBit)"))
-                
-                let geBit: Int = (flagCount % 100) % 10
-                imageView3.image = NSImage(named: NSImage.Name("gnumber_\(geBit)"))
-            }
-            else if flagCount > -100 {
-                
-                imageView1.image = flagCount <= -10 ? NSImage(named: NSImage.Name("gnumber_dash")) : NSImage(named: NSImage.Name("gnumber_0"))
-                
-                let tenBit: Int = (abs(flagCount) % 100) / 10
-                imageView2.image = tenBit == 0 ? NSImage(named: NSImage.Name("gnumber_dash")) : NSImage(named: NSImage.Name("gnumber_\(tenBit)"))
-                
-                let geBit: Int = (abs(flagCount) % 100) % 10
-                imageView3.image = NSImage(named: NSImage.Name("gnumber_\(geBit)"))
-            }
-        }
-    }
-
-    override func draw(_ dirtyRect: NSRect) {
-        super.draw(dirtyRect)
-
-        // Drawing code here.
-    }
-    
     override func awakeFromNib() {
         super.awakeFromNib()
         
@@ -65,4 +36,24 @@ class MSMagicMineFlagCountView: NSView {
         imageView3.frame = CGRect(x: 37, y: 3, width: 13, height: 23)
     }
     
+    var flagCount: Int = 0 {
+        didSet {
+            let baiBit: Int = flagCount / 100
+            imageView1.image = NSImage(named: NSImage.Name("gnumber_\(baiBit)"))
+            
+            let tenBit: Int = (flagCount % 100) / 10
+            imageView2.image = NSImage(named: NSImage.Name("gnumber_\(tenBit)"))
+            
+            let geBit: Int = (flagCount % 100) % 10
+            imageView3.image = NSImage(named: NSImage.Name("gnumber_\(geBit)"))
+        }
+    }
+}
+
+extension Reactive where Base: MSMagicMineFlagCountView {
+    var flags: Binder<Int> {
+        return Binder(base) { flagView, flags in
+            flagView.flagCount = flags
+        }
+    }
 }

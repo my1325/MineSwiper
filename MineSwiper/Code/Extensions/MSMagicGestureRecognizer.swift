@@ -10,11 +10,11 @@ import Cocoa
 
 protocol MSMagicGestureRecognizerDelegate: NSObjectProtocol {
     
-    func magicGestureRecognizerMouseDown()
+    func magicGestureRecognizerMouseDown(_ gestureRecognizer: MSMagicGestureRecognizer)
     
-    func magicGestureRecognizerMouseUp()
+    func magicGestureRecognizerMouseUp(_ gestureRecognizer: MSMagicGestureRecognizer)
     
-    func magicGestureRecognizerRightMouseUp()
+    func magicGestureRecognizerRightMouseUp(_ gestureRecognizer: MSMagicGestureRecognizer)
 }
 
 class MSMagicGestureRecognizer: NSGestureRecognizer {
@@ -31,16 +31,16 @@ class MSMagicGestureRecognizer: NSGestureRecognizer {
     
     override func mouseUp(with event: NSEvent) {
         super.mouseUp(with: event)
-        magicDelegate?.magicGestureRecognizerMouseUp()
+        magicDelegate?.magicGestureRecognizerMouseUp(self)
     }
     
     override func mouseDown(with event: NSEvent) {
         super.mouseDown(with: event)
-        magicDelegate?.magicGestureRecognizerMouseDown()
+        magicDelegate?.magicGestureRecognizerMouseDown(self)
     }
     
     override func rightMouseUp(with event: NSEvent) {
         super.rightMouseUp(with: event)
-        magicDelegate?.magicGestureRecognizerRightMouseUp()
+        magicDelegate?.magicGestureRecognizerRightMouseUp(self)
     }
 }

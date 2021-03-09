@@ -32,21 +32,21 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
         intermediateMenuItem?.state = NSControl.StateValue(rawValue: 0)
         highMenuItem?.state = NSControl.StateValue(rawValue: 0)
         
-        mainWindowController?.reload(magicType: .small)
+        mainWindowController?.reload(.default)
     }
     @IBAction func touchIntermediateMenuItem(_ item: NSMenuItem) {
         item.state = NSControl.StateValue(rawValue: 1)
         primaryMenuItem?.state = NSControl.StateValue(rawValue: 0)
         highMenuItem?.state = NSControl.StateValue(rawValue: 0)
         
-        mainWindowController?.reload(magicType: .middle)
+        mainWindowController?.reload(.middle)
     }
     @IBAction func touchHighMenuItem(_ item: NSMenuItem) {
         item.state = NSControl.StateValue(rawValue: 1)
         primaryMenuItem?.state = NSControl.StateValue(rawValue: 0)
         intermediateMenuItem?.state = NSControl.StateValue(rawValue: 0)
         
-        mainWindowController?.reload(magicType: .big)
+        mainWindowController?.reload(.big)
     }
 }
 

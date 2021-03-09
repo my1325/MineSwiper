@@ -8,26 +8,38 @@
 
 /* Begin PBXBuildFile section */
 		0F2879321EF23431002D1C2A /* MSMagicView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F2879311EF23431002D1C2A /* MSMagicView.swift */; };
-		0F2879381EF262D1002D1C2A /* MSMagicViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F2879371EF262D1002D1C2A /* MSMagicViewModel.swift */; };
 		0F28793B1EF26673002D1C2A /* MSMagicItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F2879391EF26673002D1C2A /* MSMagicItem.swift */; };
 		0F28793C1EF26673002D1C2A /* MSMagicItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0F28793A1EF26673002D1C2A /* MSMagicItem.xib */; };
 		0F28793E1EF280A5002D1C2A /* MSMagicGestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F28793D1EF280A5002D1C2A /* MSMagicGestureRecognizer.swift */; };
+		0F5E7FA125F5B67C005DF2EC /* MineGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F5E7FA025F5B67C005DF2EC /* MineGame.swift */; };
+		0F5E7FA925F5E7E3005DF2EC /* ThreadTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F5E7FA825F5E7E3005DF2EC /* ThreadTimer.swift */; };
+		0F5E7FB925F5F297005DF2EC /* MineGame+RxSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F5E7FB825F5F297005DF2EC /* MineGame+RxSwift.swift */; };
+		0F5E7FBD25F627BD005DF2EC /* NSCollection+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F5E7FBC25F627BD005DF2EC /* NSCollection+Extensions.swift */; };
+		0F5E7FC125F630CA005DF2EC /* MSMagicView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F5E7FC025F630CA005DF2EC /* MSMagicView+Extensions.swift */; };
+		0F5E7FC525F705B7005DF2EC /* MineViewItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F5E7FC425F705B7005DF2EC /* MineViewItem.swift */; };
+		0F5E7FCF25F711C6005DF2EC /* NSView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F5E7FCE25F711C6005DF2EC /* NSView+Extensions.swift */; };
 		0FBAE0881EEE6BDE00CC62E1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FBAE0871EEE6BDE00CC62E1 /* AppDelegate.swift */; };
 		0FBAE08C1EEE6BDE00CC62E1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0FBAE08B1EEE6BDE00CC62E1 /* Assets.xcassets */; };
 		0FBAE0991EEE724000CC62E1 /* MSMainWC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FBAE0971EEE724000CC62E1 /* MSMainWC.swift */; };
 		0FBAE09A1EEE724000CC62E1 /* MSMainWC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0FBAE0981EEE724000CC62E1 /* MSMainWC.xib */; };
 		0FBAE09C1EEE748B00CC62E1 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0FBAE09B1EEE748B00CC62E1 /* MainMenu.xib */; };
-		0FBAE0A31EEE859000CC62E1 /* MSMagicMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FBAE0A21EEE859000CC62E1 /* MSMagicMap.swift */; };
 		0FCF7EF81EFB526100034649 /* MSMagicMineFlagCountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FCF7EF71EFB526100034649 /* MSMagicMineFlagCountView.swift */; };
 		0FCF7EFC1EFB527B00034649 /* MSMagicTimeCountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FCF7EFB1EFB527B00034649 /* MSMagicTimeCountView.swift */; };
+		71F416EA8C983BA368531136 /* Pods_MineSwiper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4504549E3A2379296E04B5D0 /* Pods_MineSwiper.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0F2879311EF23431002D1C2A /* MSMagicView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MSMagicView.swift; sourceTree = "<group>"; };
-		0F2879371EF262D1002D1C2A /* MSMagicViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MSMagicViewModel.swift; sourceTree = "<group>"; };
 		0F2879391EF26673002D1C2A /* MSMagicItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MSMagicItem.swift; sourceTree = "<group>"; };
 		0F28793A1EF26673002D1C2A /* MSMagicItem.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MSMagicItem.xib; sourceTree = "<group>"; };
 		0F28793D1EF280A5002D1C2A /* MSMagicGestureRecognizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MSMagicGestureRecognizer.swift; sourceTree = "<group>"; };
+		0F5E7FA025F5B67C005DF2EC /* MineGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MineGame.swift; sourceTree = "<group>"; };
+		0F5E7FA825F5E7E3005DF2EC /* ThreadTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreadTimer.swift; sourceTree = "<group>"; };
+		0F5E7FB825F5F297005DF2EC /* MineGame+RxSwift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MineGame+RxSwift.swift"; sourceTree = "<group>"; };
+		0F5E7FBC25F627BD005DF2EC /* NSCollection+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSCollection+Extensions.swift"; sourceTree = "<group>"; };
+		0F5E7FC025F630CA005DF2EC /* MSMagicView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MSMagicView+Extensions.swift"; sourceTree = "<group>"; };
+		0F5E7FC425F705B7005DF2EC /* MineViewItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MineViewItem.swift; sourceTree = "<group>"; };
+		0F5E7FCE25F711C6005DF2EC /* NSView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSView+Extensions.swift"; sourceTree = "<group>"; };
 		0FBAE0841EEE6BDE00CC62E1 /* MineSwiper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MineSwiper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0FBAE0871EEE6BDE00CC62E1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0FBAE08B1EEE6BDE00CC62E1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -35,10 +47,12 @@
 		0FBAE0971EEE724000CC62E1 /* MSMainWC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MSMainWC.swift; sourceTree = "<group>"; };
 		0FBAE0981EEE724000CC62E1 /* MSMainWC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MSMainWC.xib; sourceTree = "<group>"; };
 		0FBAE09B1EEE748B00CC62E1 /* MainMenu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainMenu.xib; sourceTree = "<group>"; };
-		0FBAE0A21EEE859000CC62E1 /* MSMagicMap.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MSMagicMap.swift; sourceTree = "<group>"; };
 		0FCF7EF71EFB526100034649 /* MSMagicMineFlagCountView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MSMagicMineFlagCountView.swift; sourceTree = "<group>"; };
 		0FCF7EFB1EFB527B00034649 /* MSMagicTimeCountView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MSMagicTimeCountView.swift; sourceTree = "<group>"; };
 		0FCF7EFD1EFB9D0600034649 /* MineSwiper.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MineSwiper.entitlements; sourceTree = "<group>"; };
+		4504549E3A2379296E04B5D0 /* Pods_MineSwiper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MineSwiper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		76560D1E2027A575B821116C /* Pods-MineSwiper.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MineSwiper.release.xcconfig"; path = "Target Support Files/Pods-MineSwiper/Pods-MineSwiper.release.xcconfig"; sourceTree = "<group>"; };
+		DE8AA61F30FAE18D26E2F88D /* Pods-MineSwiper.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MineSwiper.debug.xcconfig"; path = "Target Support Files/Pods-MineSwiper/Pods-MineSwiper.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,18 +60,40 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				71F416EA8C983BA368531136 /* Pods_MineSwiper.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0F5E7F9F25F5B662005DF2EC /* MineGame */ = {
+			isa = PBXGroup;
+			children = (
+				0F5E7FA025F5B67C005DF2EC /* MineGame.swift */,
+				0F5E7FA825F5E7E3005DF2EC /* ThreadTimer.swift */,
+				0F5E7FB825F5F297005DF2EC /* MineGame+RxSwift.swift */,
+			);
+			path = MineGame;
+			sourceTree = "<group>";
+		};
+		0F5E7FBB25F627A2005DF2EC /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				0F28793D1EF280A5002D1C2A /* MSMagicGestureRecognizer.swift */,
+				0F5E7FBC25F627BD005DF2EC /* NSCollection+Extensions.swift */,
+				0F5E7FCE25F711C6005DF2EC /* NSView+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		0FBAE07B1EEE6BDE00CC62E1 = {
 			isa = PBXGroup;
 			children = (
 				0FBAE0861EEE6BDE00CC62E1 /* MineSwiper */,
 				0FBAE0851EEE6BDE00CC62E1 /* Products */,
 				0FCF7EFE1EFB9D0800034649 /* Frameworks */,
+				4250C31C418F28316B49F0DE /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -85,6 +121,8 @@
 		0FBAE0961EEE721F00CC62E1 /* Code */ = {
 			isa = PBXGroup;
 			children = (
+				0F5E7FBB25F627A2005DF2EC /* Extensions */,
+				0F5E7F9F25F5B662005DF2EC /* MineGame */,
 				0FBAE09D1EEE7F5B00CC62E1 /* MagicCode */,
 				0FBAE0971EEE724000CC62E1 /* MSMainWC.swift */,
 				0FBAE0981EEE724000CC62E1 /* MSMainWC.xib */,
@@ -95,12 +133,11 @@
 		0FBAE09D1EEE7F5B00CC62E1 /* MagicCode */ = {
 			isa = PBXGroup;
 			children = (
-				0FBAE0A21EEE859000CC62E1 /* MSMagicMap.swift */,
 				0F2879311EF23431002D1C2A /* MSMagicView.swift */,
-				0F2879371EF262D1002D1C2A /* MSMagicViewModel.swift */,
+				0F5E7FC025F630CA005DF2EC /* MSMagicView+Extensions.swift */,
+				0F5E7FC425F705B7005DF2EC /* MineViewItem.swift */,
 				0F2879391EF26673002D1C2A /* MSMagicItem.swift */,
 				0F28793A1EF26673002D1C2A /* MSMagicItem.xib */,
-				0F28793D1EF280A5002D1C2A /* MSMagicGestureRecognizer.swift */,
 				0FCF7EF71EFB526100034649 /* MSMagicMineFlagCountView.swift */,
 				0FCF7EFB1EFB527B00034649 /* MSMagicTimeCountView.swift */,
 			);
@@ -110,8 +147,18 @@
 		0FCF7EFE1EFB9D0800034649 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4504549E3A2379296E04B5D0 /* Pods_MineSwiper.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4250C31C418F28316B49F0DE /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DE8AA61F30FAE18D26E2F88D /* Pods-MineSwiper.debug.xcconfig */,
+				76560D1E2027A575B821116C /* Pods-MineSwiper.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -121,9 +168,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0FBAE0931EEE6BDE00CC62E1 /* Build configuration list for PBXNativeTarget "MineSwiper" */;
 			buildPhases = (
+				34FFFD1FBD13621E61241000 /* [CP] Check Pods Manifest.lock */,
 				0FBAE0801EEE6BDE00CC62E1 /* Sources */,
 				0FBAE0811EEE6BDE00CC62E1 /* Frameworks */,
 				0FBAE0821EEE6BDE00CC62E1 /* Resources */,
+				292F5B32CDABDAA871DCD9B4 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -194,19 +243,73 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		292F5B32CDABDAA871DCD9B4 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MineSwiper/Pods-MineSwiper-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxRelay/RxRelay.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxRelay.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MineSwiper/Pods-MineSwiper-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		34FFFD1FBD13621E61241000 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MineSwiper-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		0FBAE0801EEE6BDE00CC62E1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0F2879381EF262D1002D1C2A /* MSMagicViewModel.swift in Sources */,
+				0F5E7FB925F5F297005DF2EC /* MineGame+RxSwift.swift in Sources */,
 				0FCF7EF81EFB526100034649 /* MSMagicMineFlagCountView.swift in Sources */,
+				0F5E7FC525F705B7005DF2EC /* MineViewItem.swift in Sources */,
+				0F5E7FC125F630CA005DF2EC /* MSMagicView+Extensions.swift in Sources */,
 				0F2879321EF23431002D1C2A /* MSMagicView.swift in Sources */,
+				0F5E7FA925F5E7E3005DF2EC /* ThreadTimer.swift in Sources */,
 				0FBAE0991EEE724000CC62E1 /* MSMainWC.swift in Sources */,
-				0FBAE0A31EEE859000CC62E1 /* MSMagicMap.swift in Sources */,
 				0F28793B1EF26673002D1C2A /* MSMagicItem.swift in Sources */,
+				0F5E7FBD25F627BD005DF2EC /* NSCollection+Extensions.swift in Sources */,
+				0F5E7FCF25F711C6005DF2EC /* NSView+Extensions.swift in Sources */,
 				0FBAE0881EEE6BDE00CC62E1 /* AppDelegate.swift in Sources */,
 				0F28793E1EF280A5002D1C2A /* MSMagicGestureRecognizer.swift in Sources */,
+				0F5E7FA125F5B67C005DF2EC /* MineGame.swift in Sources */,
 				0FCF7EFC1EFB527B00034649 /* MSMagicTimeCountView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -308,6 +411,7 @@
 		};
 		0FBAE0941EEE6BDE00CC62E1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DE8AA61F30FAE18D26E2F88D /* Pods-MineSwiper.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = MineSwiper/MineSwiper.entitlements;
@@ -329,6 +433,7 @@
 		};
 		0FBAE0951EEE6BDE00CC62E1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 76560D1E2027A575B821116C /* Pods-MineSwiper.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = MineSwiper/MineSwiper.entitlements;

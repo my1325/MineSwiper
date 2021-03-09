@@ -7,68 +7,64 @@
 //
 
 import Cocoa
+import SnapKit
+import RxSwift
 
-let MSMagicGameReloadNotification = "MSMagicGameReloadNotification"
+extension MineGame.Map {
+    
+    var itemWidth: CGFloat {
+        return 30
+    }
+    
+    var itemHeight: CGFloat {
+        return 30
+    }
+    
+    var windowWidth: CGFloat {
+        return CGFloat(width) * itemWidth
+    }
+    
+    var windowHeight: CGFloat {
+        return CGFloat(height) * itemHeight
+    }
+}
 
 class MSMainWC: NSWindowController {
     
-    @IBOutlet weak var magicView: MSMagicView?
-    @IBOutlet weak var magicMineFlagView: MSMagicMineFlagCountView?
-    @IBOutlet weak var magicStartView: NSButton?
-    @IBOutlet weak var magicTimeCountView: MSMagicTimeCountView?
-    @IBOutlet weak var magicViewHeight: NSLayoutConstraint?
-    @IBOutlet weak var magicViewWidth: NSLayoutConstraint?
+    @IBOutlet weak var magicView: MSMagicView!
+    @IBOutlet weak var magicMineFlagView: MSMagicMineFlagCountView!
+    @IBOutlet weak var magicStartView: NSButton!
+    @IBOutlet weak var magicTimeCountView: MSMagicTimeCountView!
     
     override var windowNibName: NSNib.Name? { return NSNib.Name("MSMainWC") }
     override var owner: AnyObject? { return self }
     
-    var type: MSMagicType = .small
+    let mineGame = MineGame(map: .default)
     
+    let disposeBag = DisposeBag()
     override func windowDidLoad() {
         super.windowDidLoad()
 
         // Implement this method to handle any initialization after your window controller's window has been loaded from its nib file.
-        NotificationCenter.default.addObserver(self, selector: #selector(handleFlagCountNotification(_:)), name: NSNotification.Name(rawValue: MSMagicFlagCountDidChangedNotification), object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(handleGameStartNotification(_:)), name: NSNotification.Name(rawValue: MSMagicGameStartNotification), object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(handleGameOverNotification(_:)), name: NSNotification.Name(rawValue: MSMagicGameOverNotification), object: nil)
-        reload(magicType: .small)
-    }
-    
-    @objc func handleGameOverNotification(_ notification: NotificationCenter) {
-        magicTimeCountView?.stopTimer()
-    }
-    
-    @objc func handleGameStartNotification(_ notification: Notification) {
-        magicTimeCountView?.startTimer()
-    }
-    
-    @objc func handleFlagCountNotification(_ notification: Notification) {
-        magicMineFlagView?.flagCount = (magicView?.magicModel.flagCount)!
-    }
-    
-    func reload(magicType: MSMagicType) {
+        mineGame.rx.flagLocation.map({ [unowned self] _ in self.mineGame.flags }).bind(to: magicMineFlagView.rx.flags).disposed(by: disposeBag)
+        mineGame.rx.playingTimeInterval.map({ Int($0) }).bind(to: magicTimeCountView.rx.timeCount).disposed(by: disposeBag)
+        mineGame.rx.mineItems.map({ $0.reduce([], { $0 + $1 }).map({ MineViewItem(mineItem: $0) }) }).bind(to: magicView.rx.mineItems).disposed(by: disposeBag)
         
-        NotificationCenter.default.post(name: NSNotification.Name(rawValue: MSMagicGameReloadNotification), object: nil, userInfo: nil)
+        magicView.rx.didTouchMineItem.map({ $0.item }).bind(to: mineGame.rx.uncoverLocationActions).disposed(by: disposeBag)
+        magicView.rx.didRightTouchMineItem.map({ $0.item }).bind(to: mineGame.rx.flagLocationAction).disposed(by: disposeBag)
         
-        type = magicType
-       
-        magicView?.magicType = magicType
-        magicView?.reloadData()
-        magicView?.isFirstTouch = true
-        magicTimeCountView?.timeCount = 0
-        magicTimeCountView?.stopTimer()
-        magicMineFlagView?.flagCount = (magicView?.magicModel.flagCount)!
+        reload(.default)
+    }
+    
+    func reload(_ map: MineGame.Map) {
+        mineGame.map = map
+        magicMineFlagView?.flagCount = 0
         
-        magicViewWidth?.constant = CGFloat(magicType.windowWidth)
-        magicViewHeight?.constant = CGFloat(magicType.windowHeight)
+        magicView.updateConstraint(forWidth: map.windowWidth)
+        magicView.updateConstraint(forHeight: map.windowHeight)
     }
     
     @IBAction func touchStartButton(_ sender: NSButton) {
-        reload(magicType: type)
+        mineGame.start()
     }
-    
-    deinit {
-        NotificationCenter.default.removeObserver(self)
-    }
-    
 }
